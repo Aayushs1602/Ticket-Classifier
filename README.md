@@ -99,11 +99,12 @@ The app will open in your browser at:
 
 ## 🧩 Example Scenarios
 
-Channel	|Severity	|Summary	|Expected Decision|
-email	|high	|Payment module crashes with NullPointerException	|AI_PATCH|
-chat	|medium	|User unable to access dashboard due to config error	|VIBE_WORKFLOW|
-web	|high	|Script failed due to missing API key	|AI_PATCH|
-phone	|low	|User forgot password	VIBE_WORKFLOW|
+| Channel | Severity | Summary                                                | Expected Decision |
+|----------|-----------|--------------------------------------------------------|-------------------|
+| Email    | High      | Payment module crashes with `NullPointerException`    | **AI_PATCH**      |
+| Chat     | Medium    | User unable to access dashboard due to config error   | **VIBE_WORKFLOW** |
+| Web      | High      | Script failed due to missing API key                  | **AI_PATCH**      |
+
 
 ## ⚙️ Tech Stack
 
