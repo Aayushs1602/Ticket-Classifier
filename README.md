@@ -38,13 +38,12 @@ This project was built as part of the **VibeFI AI Challenge (Step 2)** to demons
 
 ## 🧠 Architecture Overview
 
-.
-├── app.py # Streamlit app for UI
-├── classifier.py # Core logic (decision + AI reasoning)
-├── test_classifier.py # Unit tests and sample runs
-├── requirements.txt # Dependencies
-├── README.md # Project documentation
-└── .gitignore # Ignore rules
+-  app.py # Streamlit app for UI
+- classifier.py # Core logic (decision + AI reasoning)
+- test_classifier.py # Unit tests and sample runs
+- requirements.txt # Dependencies
+- README.md # Project documentation
+- .gitignore # Ignore rules
 
 
 **Logic Flow:**
@@ -99,43 +98,33 @@ The app will open in your browser at:
 👉 http://localhost:8501
 
 ## 🧩 Example Scenarios
-|Channel   |Severity   |Summary	                                            |Expected Decision|
-|----------|-----------|----------------------------------------------------------------------|
-|email	   |high	   |Payment module crashes with NullPointerException	|AI_PATCH         |
-|----------|-----------|----------------------------------------------------------------------|
-|chat	   |medium	   |User unable to access dashboard due to config error	|VIBE_WORKFLOW    |
-|----------|-----------|----------------------------------------------------------------------|
-|web	   |high	   |Script failed due to missing API key	            |AI_PATCH         |
-|----------|-----------|----------------------------------------------------------------------|
-|phone	   |low	       |User forgot password	                            |VIBE_WORKFLOW    |
-|----------|-----------|----------------------------------------------------------------------|
+
+Channel	|Severity	|Summary	|Expected Decision|
+email	|high	|Payment module crashes with NullPointerException	|AI_PATCH|
+chat	|medium	|User unable to access dashboard due to config error	|VIBE_WORKFLOW|
+web	|high	|Script failed due to missing API key	|AI_PATCH|
+phone	|low	|User forgot password	VIBE_WORKFLOW|
 
 ## ⚙️ Tech Stack
+
 Component       |Library / Tool	          |       Purpose|
 |----------|-----------|----------------------------------------------------------------------|
 Frontend UI	    |Streamlit	|Interactive ticket submission|
-|----------|-----------|----------------------------------------------------------------------|
 AI Text Model	|HuggingFace Transformers	|Dynamic reasoning & checklist|
-|----------|-----------|----------------------------------------------------------------------|
 Heuristics	    |Python + Regex	|Decision rules|
-|----------|-----------|----------------------------------------------------------------------|
 Testing	   |Python (unittest)	|Validation of logic|
-|----------|-----------|----------------------------------------------------------------------|
 Deployment	|Local / Cloud Run	|Easily deployable Streamlit app|
-|----------|-----------|----------------------------------------------------------------------|
+
 
 
 ## 🧩 Trade-offs
+
 Area	|Decision	|Trade-off|
 |----------|-----------|----------------------------------------------------------------------|
 AI Model	|Used local DistilGPT-2	|Slightly less coherent than GPT-4 but offline and free|
-|----------|-----------|----------------------------------------------------------------------|
 Classification	|Rule-based	|Faster but less adaptive; could be replaced with fine-tuned model later|
-|----------|-----------|----------------------------------------------------------------------|
 Checklist Generation	|LLM-based	|Adds interpretability but occasional generic steps|
-|----------|-----------|----------------------------------------------------------------------|
 Validation	|Heuristic tests only	|Could expand to a labeled dataset later|
-|----------|-----------|----------------------------------------------------------------------|
 
 
 ## 🧬 Future Improvements
