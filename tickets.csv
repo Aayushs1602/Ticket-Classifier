@@ -1,0 +1,7 @@
+summary,severity,channel,label
+Automated transfer fails with Python TypeError,high,email,AI_PATCH
+Database connection timeout during login,medium,web,VIBE_WORKFLOW
+Model training job crashed with stack trace,high,chat,AI_PATCH
+User cannot access dashboard due to permission denied,medium,email,VIBE_WORKFLOW
+API key invalid during scheduled sync,low,web,VIBE_WORKFLOW
+Bug in transaction parser causing incorrect output,high,email,AI_PATCH
