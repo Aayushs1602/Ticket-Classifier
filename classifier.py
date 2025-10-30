@@ -86,7 +86,7 @@ def extract_matches_and_scores(summary: str) -> Tuple[List[str], List[str], int,
 
 def severity_multiplier(severity: str) -> float:
     sev = (severity or "").lower()
-    return {"low": 0.9, "medium": 1.0, "high": 1.2, "critical": 1.4}.get(sev, 1.0)
+    return {"low": 0.9, "medium": 1.0, "high": 1.2}.get(sev, 1.0)
 
 
 def channel_influence(channel: str) -> Tuple[int, int]:
